@@ -2,7 +2,7 @@ project( tools )
 
 include_directories( "${CMAKE_SOURCE_DIR}/include" )
 
-set( POSTURE_TOOLS testposture trainposture )
+set( POSTURE_TOOLS testposture trainposture ) # testposture requires _cvFontQt _cvAddText
 foreach( PROG ${POSTURE_TOOLS} )
 	add_executable( ${PROG} "${PROG}.c" )
 	target_link_libraries( ${PROG} body hand posture

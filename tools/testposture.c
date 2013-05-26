@@ -65,7 +65,7 @@ int main (int argc, char *argv[])
 	int num, count=0;
 	char *w1 = "rgb", *w2 = "number";
 	char buff[5];
-	CvFont font[N];
+	//CvFont font[N];
 	CvScalar color[N]; 
 
 	parse_args(argc,argv);
@@ -79,9 +79,9 @@ int main (int argc, char *argv[])
 	color[4] = CV_RGB(0,255,255);
 
 	int i;
-	for (i=0; i<N; i++)
-		font[i] = cvFontQt("Helvetica", 200, color[i], CV_FONT_NORMAL,
-				   CV_STYLE_NORMAL, 0);
+	//for (i=0; i<N; i++)
+	//	font[i] = cvFontQt("Helvetica", 200, color[i], CV_FONT_NORMAL,
+	//			   CV_STYLE_NORMAL, 0);
 
 	cvNamedWindow(w1, WT);
 	cvNamedWindow(w2, WT);
@@ -109,7 +109,7 @@ int main (int argc, char *argv[])
 		cvMoveWindow(w1, 640, 0);
 		sprintf(buff, "%d", p+1);
 		cvZero(number);
-		cvAddText(number, buff, cvPoint(80,190), &(font[p]));
+		//cvAddText(number, buff, cvPoint(80,190), &(font[p]));
 		cvShowImage(w2, number);
 		cvMoveWindow(w2, 0, 530);
 
