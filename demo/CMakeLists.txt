@@ -4,7 +4,7 @@ include_directories( "${CMAKE_SOURCE_DIR}/include" )
 
 add_executable( demoposture demoposture.c)
 target_link_libraries( demoposture body hand posture
-				   ${OpenCV_LIBS}
+				   ${OpenCV_LIBRARIES}
 				   ${FREENECT_LIBRARIES}
 )
 
